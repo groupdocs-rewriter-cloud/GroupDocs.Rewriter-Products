@@ -5,12 +5,12 @@ date: 2021-04-27T09:31:06+03:00
 draft: false
 
 ############################# Head ############################
-head_title: "Text and Documents Paraphrasing Solution"
-head_description: "Rewrite text and documents created in Microsoft Word and PDF file formats preserving their sense across popular platforms"
+head_title: "Text and documents paraphrasing"
+head_description: "Automatically reword and rephrase text, PDFs, Microsoft Office and OpenOffice documents with full preservation of their meaning on all popular platforms."
 
 ############################# Header ############################
-title: "Text and Documents Paraphrasing Solution"
-description: "‎Rewrite text and documents created in Microsoft Word and PDF file formats preserving their sense across popular platforms"
+title: "Text and documents paraphrasing"
+description: "Automatically reword and rephrase text, PDFs, Microsoft Office and OpenOffice documents with full preservation of their meaning on all popular platforms."
 
 ############################# APIs ###############################
 apis:
@@ -18,9 +18,9 @@ apis:
 
   api:
     # api loop
-    - title: "GroupDocs.Rewriter Cloud APIs Include"
+    - title: "GroupDocs.Rewriter Cloud API and SDKs"
       link: "/rewriter/family/"
-      label: "View All Cloud APIs"
+      label: "View all SDKs"
       api_product:
         # api_product loop
         - link: "/rewriter/curl/"
@@ -28,7 +28,7 @@ apis:
           image: "/sdk/272x272/groupdocs_rewriter-for-curl.png"
           product: "GroupDocs.Rewriter"
           platform: "cURL"
-          content: Interact with documents paraphrasing REST API using cURL commands. Rewrite English text or document of Word or PDF format preserving its sense."
+          content: "Interact with GroupDocs.Rewriter REST API using cURL commands. Automatically paraphrase texts and documents with the quality of the professional copyrighter."
 
         # api_product loop
         - link: "/rewriter/net/"
@@ -36,28 +36,44 @@ apis:
           image: "/sdk/272x272/groupdocs_rewriter-for-net.png"
           product: "GroupDocs.Rewriter"
           platform: ".NET"
-          content: "Use paraphrasing RESTful API easily with .NET Cloud SDK to rewrite text and on-page contents of popular business file formats like Microsoft Word and Adobe PDF."
+          content: "Automatically paraphrase texts and documents in your .NET desktop and web applications. Supports all popular document formats with minimal load on end user systems or servers."
+
+        # api_product loop
+        - link: "/rewriter/python/"
+          img_alt: "GroupDocs.Rewriter Cloud SDK for Python"
+          image: "/sdk/272x272/groupdocs_rewriter-for-python.png"
+          product: "GroupDocs.Rewriter"
+          platform: "Python"
+          content: "Create cross-platform AI and automation solutions in Python based on GroupDocs.Rewriter API. Paraphrase texts and documents focusing on business logic rather than the technical details."
 
     # api loop
-    - title: "GroupDocs.Rewriter Cross Platform Apps Include"
+    - title: "GroupDocs.Rewriter online applications"
       link: "https://products.groupdocs.app/rewriter/family"
-      label: "View All Cross Platform Apps"
+      label: "Try other web apps"
       api_product:
         # api_product loop
         - link: "https://products.groupdocs.app/rewriter/total"
-          img_alt: "GroupDocs.Rewriter Total"
+          img_alt: "Online paraphrasing of any document"
           image: "/logo/app/groupdocs_rewriter-app.png"
           product: "GroupDocs.Rewriter"
-          platform: "Total"
-          content: "Rewrite english language content of your Microsoft Word or PDF documents preserving their sense using free online paraphrasing app."
+          platform: "All formats"
+          content: "Automatically paraphrase and reword Microsoft Office, OpenOffice, PDF documents, and text files online."
 
         # api_product loop
         - link: "https://products.groupdocs.app/rewriter/text"
-          img_alt: "GroupDocs.Rewriter Text"
+          img_alt: "Paraphrase plain text content"
           image: "/logo/app/groupdocs_rewriter-text-app.png"
           product: "GroupDocs.Rewriter"
           platform: "Text"
-          content: "Paraphrase your text using free online app in your prefered browser on any desktop or mobile OS."
+          content: "Create unique content on desktop and mobile platforms by automatically rewording and paraphrasing the text."
+
+        # api_product loop
+        - link: "https://products.groupdocs.app/rewriter/pdf"
+          img_alt: "Paraphrase PDF documents"
+          image: "/logo/app/groupdocs_rewriter-pdf-app.png"
+          product: "GroupDocs.Rewriter"
+          platform: "PDF"
+          content: "Automatically paraphrase and reword PDF documents and save the result in any format from your browser."
 
 ############################# Testimonials ###############################
 testimonials:

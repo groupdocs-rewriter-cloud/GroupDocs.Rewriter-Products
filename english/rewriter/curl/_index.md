@@ -10,12 +10,12 @@ platform: "cURL"
 platform_tag: "curl"
 
 ############################# Head ############################
-head_title: "Rewrite English Text from Word & PDF Documents via cURL Commands"
-head_description: "Rewrite text from Word and PDF documents via cURL commands. Paraphrase english text and text content of your documents preserving its original sense."
+head_title: "Paraphrase texts and documents from the command line"
+head_description: "Interact with GroupDocs.Rewriter REST API directly from the command line or Bash scripts without installing any software. Automatically paraphrase texts and documents with the quality of the professional copyrighter."
 
 ############################# Header ############################
-title: "Rewrite Documents using cURL"
-description: "Paraphrase english text or text content of Microsoft Word and PDF documents via cURL commands without installing any external software."
+title: "Paraphrase texts and documents from the command line"
+description: "Interact with GroupDocs.Rewriter REST API directly from the command line or Bash scripts without installing any software. Automatically paraphrase texts and documents with the quality of the professional copyrighter."
 button:
     enable: true
 
@@ -57,59 +57,66 @@ submenu:
 overview:
     enable: true
     content: |
-      GroupDocs.Rewriter Cloud for cURL is a flexible text and documents paraphrasing solution to transform text or text-based content on your cloud-hosted Microsoft Word and PDF documents across 30 language pairs. Simply use cURL commands to send requests to the REST API and paraphrase English language content from the supported document types.
+      GroupDocs.Rewriter is an easy-to-use and versatile online service for rephrasing the texts with full preservation of the meaning. Its advanced AI reads and understands the text and then rephrases it in various wordings, providing a plagiarism-free result without losing the original meaning. While the background process is very complex and resource-intensive, you do not have to worry about formulas, machine learning, and load – our cloud services do all the work.
 
-      The API precisely extracts the text within the contents of Word documents and PDF files, rewrites it and replaces the original document's content by the paraphrased one.
+      The service provides a versatile and easy-to-use REST API, which can be accessed without installing any software. Just use cURL commands and combine them into scripts for complex tasks. You can also use third party REST API tools like Postman. This allows you to use GroupDocs.Rewriter on any platform with an internet connection, even those not yet covered by the SDK.
     tabs:
       enable: true
       
       ## TAB ONE ##
       tab_one:
         description: |
-          An overview of the main features supported by GroupDocs.Rewriter Cloud.
+          Main capabilities of GroupDocs.Rewriter Cloud
       
         left:
           enable: true
           icon: "fas fa-crop"
-          title: "Documents Rewriter"
+          title: "Supported content"
           content: |
-            * Rewrite Plain Text
-            * Rewrite Word Documents
-            * Rewrite PDF Documents
+            * Plain text
+            * Microsoft Office
+            * OpenOffice
+            * PDF
         right:
           enable: true
           icon: "fas fa-file-alt"
-          title: "Supported Languages"
+          title: "Supported languages"
           content: |
+            * Arabic
             * English
+            * Russian
+            * Ukrainian
       
       ## TAB TWO ##
       tab_two:
         description: |
-          GroupDocs.Rewriter Cloud supports a number of document formats including almost all common business document file formats.
+          GroupDocs.Rewriter Cloud supports most popular document formats
 
         left:
           enable: true
           table:
             # table loop
-            - title: "Microsoft Office Formats"
+             - title: "Office documents"
               content: |
-                * **Word**: DOC, DOCX, DOCM
+                * **Microsoft Word**
+                * **OpenDocument**
+                * **RTF**
                 
         right:
           enable: true
           table:
             # table loop
-            - title: "Other Formats"
+            - title: "Other formats"
               content: |
                 * **PDF**
+                * **TXT**
         
 
 
       ## TAB THREE ##
       tab_three:
         description: |
-          GroupDocs.Rewriter Cloud for cURL - some of the supported languages and platforms.
+          GroupDocs.Rewriter Cloud for cURL works on any device or platform with Internet connection
       
         left:
           enable: true
@@ -148,37 +155,37 @@ overview:
 ############################# Features ############################
 features:
     enable: true
-    title: "Advanced Rewriter REST API Features"
+    title: "Advanced features of document paraphrasing REST API"
 
     feature:
       # feature loop
       - icon: "fas fa-language"
-        content: "Supports English language paraphrasing"
+        content: "Creates unique content while fully preserving the original message"
 
       # feature loop
-      - icon: "fas fa-copy"
-        content: "Paraphrasing of Word documents"
+      - icon: "fas fa-file"
+        content: "Supports Microsoft Office, OpenOffice and PDF documents without additional software"
 
       # feature loop
-      - icon: "fas fa-file-alt"
-        content: "Paraphrasing of PDF documents"
+      - icon: "fas fa-random"
+        content: "Converts paraphrased documents to different formats"
       
       # feature loop
-      - icon: "fas fa-copy"
-        content: "Plain text rewriting"
+      - icon: "fas fa-link"
+        content: "Processes files from URLs and public repositories"
         
       # feature loop
-      - icon: "fas fa-lock"
-        content: "APIs are secured and require authentication"
+      - icon: "fas fa-mobile"
+        content: "Works on any device and platform, including smartphones"
         
       # feature loop
       - icon: "fas fa-list"
-        content: "API explorer based on swagger collection"
+        content: "API explorer based on Swagger collection"
     
     more_feature:
       # more_feature_loop
-      - title: "Any Language, Platform and Storage Service Provider"
-        content: "GroupDocs.Rewriter for Cloud is a REST based API that can easily be integrated with any language or platform, capable to manage HTTP requests and responses. It supports all popular cloud storage services such as Google Cloud, Drive, DropBox and Amazon S3 to interact without any dependencies. "
+      - title: "Any language, platform and storage service provider"
+        content: "GroupDocs.Rewriter is a REST API that can easily be integrated into any application written in any programming language capable of handling HTTP requests and responses. It natively supports all popular cloud storage services such as Google Cloud, Drive, DropBox and Amazon S3 to interact without any dependencies."
 
       # more_feature_loop
       - title: "Rewrite Word document - cURL"
@@ -200,8 +207,8 @@ features:
           }
           ```
       # more_feature_loop
-      - title: "Quick Start with Document Paraphrasing REST API"
-        content: "GroupDocs.Rewriter Cloud API comes with detailed developer guides and live code examples for all major programming languages to start working with API features in no time. Simply create a free account at GroupDocs Cloud, get APP SID & Key information to communicate with GroupDocs Cloud API and you are ready to make an API request on any platform using cURL commands or the SDKs of your choice."
+      - title: "Quick start with GroupDocs.Rewriter REST API"
+        content: "GroupDocs.Rewriter Cloud API comes with detailed developer references and live code examples for all major programming languages to start working with API features in no time. Simply create a free account at GroupDocs Cloud, get APP SID & Key information to communicate with GroupDocs Cloud API and you are ready to make an API request on any platform using cURL commands."
 
       # more_feature_loop
       - title: "Rewrite plain text - cURL"
@@ -232,7 +239,7 @@ support:
 ############################# Solutions ############################
 solutions:
     enable: true
-    title: "GroupDocs.Rewriter Cloud also offers individual document paraphrasing SDKs for other popular languages as listed below:"
+    title: "GroupDocs.Rewriter Cloud offers SDKs for popular programming languages and platforms:"
 
     solution:
         # solution loop
@@ -248,7 +255,13 @@ solutions:
           product: "GroupDocs.Rewriter"
           platform: ".NET"
           link: "/rewriter/net/"
-          
+
+        # solution loop
+        - img_alt: "GroupDocs.Rewriter Cloud SDK for Python"
+          image: "/sdk/272x272/groupdocs_rewriter-for-python.png"
+          product: "GroupDocs.Rewriter"
+          platform: "Python"
+          link: "/rewriter/python/"
 
 ############################# Back to top ###############################
 back_to_top:

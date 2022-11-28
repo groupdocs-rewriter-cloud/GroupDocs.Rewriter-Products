@@ -6,16 +6,16 @@ draft: false
 
 product: "Rewriter"
 product_tag: "rewriter"
-platform: ".NET"
-platform_tag: "net"
+platform: "Python"
+platform_tag: "python"
 
 ############################# Head ############################
-head_title: "Paraphrase texts and documents in your .NET applications"
-head_description: "Create .NET applications based on GroupDocs.Rewriter API focusing on business logic rather than the technical details."
+head_title: "Paraphrase content and documents in your Python applications"
+head_description: "Create cross-platform data science, AI, and automation solutions in Python based on GroupDocs.Rewriter API. Focus on business logic rather than the technical details."
 
 ############################# Header ############################
-title: ".NET Cloud SDK for document paraphrasing"
-description: "Create .NET applications based on GroupDocs.Rewriter API focusing on business logic rather than the technical details."
+title: "Python Cloud SDK for document paraphrasing"
+description: "Create cross-platform data science, AI, and automation solutions in Python based on GroupDocs.Rewriter API. Focus on business logic rather than the technical details."
 button:
     enable: true
 
@@ -24,10 +24,10 @@ submenu:
     enable: true
     
     left:
-        img_alt: "GroupDocs.Rewriter Cloud SDK for .NET"
+        img_alt: "GroupDocs.Rewriter Cloud SDK for Python"
         image: "/sdk/272x272/groupdocs_rewriter-for-net.png"
         product: "GroupDocs.Rewriter"
-        platform: ".NET"
+        platform: "Python"
 
     middle:
         button:
@@ -59,7 +59,7 @@ overview:
     content: |
       GroupDocs.Rewriter is an easy-to-use and versatile online service for rephrasing the texts with full preservation of the meaning. Its advanced AI reads and understands the text and then rephrases it in various wordings, providing a plagiarism-free result without losing the original meaning. While the background process is very complex and resource-intensive, you do not have to worry about formulas, machine learning, and load – our cloud services do all the work.
 
-      This SDK greatly simplifies the interaction of .NET code with GroupDocs.Rewriter Cloud services, allowing you to focus on business logic rather than the technical details. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple methods that can be used in any .NET application. The .NET SDK, demo applications, documentation, and examples are open source distributed under the MIT license. You can use them for any purpose and change any part of the code.
+      This SDK greatly simplifies the interaction with GroupDocs.Rewriter Cloud services from Python code, allowing you to focus on business logic rather than the technical details. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple methods that can be used in any Python application or workbook. The Python SDK, demo applications, documentation, and examples are open source distributed under the MIT license. You can use them for any purpose and change any part of the code.
     tabs:
       enable: true
       
@@ -110,14 +110,13 @@ overview:
               content: |
                 * **PDF**
                 * **TXT**
-
         
 
 
       ## TAB THREE ##
       tab_three:
         description: |
-          GroupDocs.Rewriter Cloud for .NET works on any device or platform with Internet connection
+          GroupDocs.Rewriter Cloud for Python works on any device or platform with Internet connection
       
         left:
           enable: true
@@ -187,10 +186,10 @@ features:
     more_feature:
       # more_feature_loop
       - title: "Quick start with document rewriting REST API"
-        content: "GroupDocs.Rewriter Cloud API for .NET comes with detailed developer guides and live code examples for all major programming languages to start working with paraphrasing features in no time. Simply create a free account at GroupDocs Cloud, get APP SID & Key information to communicate with GroupDocs Cloud API and you are ready to use the SDK."
+        content: "GroupDocs.Rewriter Cloud API for Python comes with detailed developer guides and live code examples for all major programming languages to start working with API features in no time. Simply create a free account at GroupDocs Cloud, get APP SID & Key information to communicate with GroupDocs Cloud API and you are ready to use the SDK."
 
       # more_feature_loop
-      - title: "Rewrite Word document - .NET"
+      - title: "Rewrite Word document - Python"
         content: |
           
           
@@ -215,10 +214,10 @@ features:
           ```
       # more_feature_loop
       - title: "Any language, platform and storage service provider"
-        content: "GroupDocs.Rewriter Cloud is a REST API that can easily be integrated with any language or platform, capable to manage HTTP requests and responses. It supports all popular cloud storage services such as Google Cloud, Drive, DropBox and Amazon S3 to interact without any dependencies."
+        content: "GroupDocs.Rewriter Cloud is a REST based API that can easily be integrated with any language or platform, capable to manage HTTP requests and responses. It supports all popular cloud storage services such as Google Cloud, Drive, DropBox and Amazon S3 to interact without any dependencies."
 
       # more_feature_loop
-      - title: "Rewrite plain text - .NET"
+      - title: "Rewrite plain text - Python"
         content: |
           
           
@@ -271,7 +270,6 @@ solutions:
           product: "GroupDocs.Rewriter"
           platform: "Python"
           link: "/rewriter/python/"
-
     
 
      
