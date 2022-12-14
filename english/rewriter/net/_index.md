@@ -96,7 +96,7 @@ overview:
           enable: true
           table:
             # table loop
-             - title: "Office documents"
+            - title: "Office documents"
               content: |
                 * **Microsoft Word**
                 * **OpenDocument**

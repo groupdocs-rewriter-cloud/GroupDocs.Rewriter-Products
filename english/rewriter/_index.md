@@ -8,6 +8,11 @@ draft: false
 head_title: "Text and documents paraphrasing"
 head_description: "Automatically reword and rephrase text, PDFs, Microsoft Office and OpenOffice documents with full preservation of their meaning on all popular platforms."
 
+breadcrumb:
+   -
+     label: GroupDocs.Rewriter
+     href: ./
+
 ############################# Header ############################
 title: "Text and documents paraphrasing"
 description: "Automatically reword and rephrase text, PDFs, Microsoft Office and OpenOffice documents with full preservation of their meaning on all popular platforms."

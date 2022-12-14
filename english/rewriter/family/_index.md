@@ -8,6 +8,14 @@ draft: false
 head_title: "API and SDKs for text and document paraphrasing"
 head_description: "Allow your desktop, web, cloud, and mobile applications to reword and rephrase texts and documents by using GroupDocs.Rewriter SDKs or directly calling the REST API."
 
+breadcrumb:
+     -
+         label: GroupDocs.Rewriter
+         href: ../
+     -
+         label: Product Family
+         href: ./
+
 ############################# Header ############################
 title: "API and SDKs for text and document paraphrasing"
 description: "Allow your desktop, web, cloud, and mobile applications to reword and rephrase texts and documents by using GroupDocs.Rewriter SDKs or directly calling the REST API."
