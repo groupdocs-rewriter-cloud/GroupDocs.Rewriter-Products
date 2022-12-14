@@ -20,6 +20,7 @@ apis:
     # api loop
     - title: "GroupDocs.Rewriter Cloud API and SDKs"
       
+      api_product:
         # api_product loop
         - link: "/rewriter/curl/"
           img_alt: "GroupDocs.Rewriter Cloud for cURL"
