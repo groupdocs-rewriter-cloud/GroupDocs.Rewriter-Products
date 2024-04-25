@@ -5,8 +5,8 @@ date: 2021-04-27T09:31:06+03:00
 draft: false
 
 ############################# Head ############################
-head_title: "Text and documents paraphrasing"
-head_description: "Automatically reword and rephrase text, PDFs, Microsoft Office and OpenOffice documents with full preservation of their meaning on all popular platforms."
+head_title: "Text and documents paraphrasing, summarization and simplification"
+head_description: "Automatically rephrase, simplify and summarize text, PDFs, Microsoft Office and OpenOffice documents with full preservation of their meaning on all popular platforms."
 
 breadcrumb:
    -
@@ -14,8 +14,8 @@ breadcrumb:
      href: ./
 
 ############################# Header ############################
-title: "Text and documents paraphrasing"
-description: "Automatically reword and rephrase text, PDFs, Microsoft Office and OpenOffice documents with full preservation of their meaning on all popular platforms."
+title: "Text and documents paraphrasing, summarization and simplification"
+description: "Automatically rephrase, simplify and summarize text, PDFs, Microsoft Office and OpenOffice documents with full preservation of their meaning on all popular platforms."
 
 ############################# APIs ###############################
 apis:
@@ -33,7 +33,7 @@ apis:
           image: "/sdk/272x272/groupdocs_rewriter-for-curl.png"
           product: "GroupDocs.Rewriter"
           platform: "cURL"
-          content: "Interact with GroupDocs.Rewriter REST API using cURL commands. Automatically paraphrase texts and documents with the quality of the professional copyrighter."
+          content: "Interact with GroupDocs.Rewriter REST API using cURL commands. Automatically paraphrase, summarize and simplify texts and documents with the quality of the professional copyrighter."
 
         # api_product loop
         - link: "/rewriter/net/"
@@ -41,7 +41,7 @@ apis:
           image: "/sdk/272x272/groupdocs_rewriter-for-net.png"
           product: "GroupDocs.Rewriter"
           platform: ".NET"
-          content: "Automatically paraphrase texts and documents in your .NET desktop and web applications. Supports all popular document formats with minimal load on end user systems or servers."
+          content: "Automatically paraphrase, summarize or simplify texts and documents in your .NET desktop and web applications. Supports all popular document formats with minimal load on end user systems or servers."
 
         # api_product loop
         - link: "/rewriter/python/"
@@ -49,7 +49,7 @@ apis:
           image: "/sdk/272x272/groupdocs_rewriter-for-python.png"
           product: "GroupDocs.Rewriter"
           platform: "Python"
-          content: "Create cross-platform AI and automation solutions in Python based on GroupDocs.Rewriter API. Paraphrase texts and documents focusing on business logic rather than the technical details."
+          content: "Create cross-platform AI and automation solutions in Python based on GroupDocs.Rewriter API. Paraphrase, simmplify and summarize texts and documents focusing on business logic rather than the technical details."
 
     # api loop
     - title: "GroupDocs.Rewriter online applications"

@@ -10,11 +10,11 @@ platform: ".NET"
 platform_tag: "net"
 
 ############################# Head ############################
-head_title: "Paraphrase texts and documents in your .NET applications"
+head_title: "Paraphrase, simplify, summarize texts and documents in your .NET applications"
 head_description: "Create .NET applications based on GroupDocs.Rewriter API focusing on business logic rather than the technical details."
 
 ############################# Header ############################
-title: ".NET Cloud SDK for document paraphrasing"
+title: ".NET Cloud SDK for document paraphrasing, summarization and simplification"
 description: "Create .NET applications based on GroupDocs.Rewriter API focusing on business logic rather than the technical details."
 button:
     enable: true
@@ -57,7 +57,7 @@ submenu:
 overview:
     enable: true
     content: |
-      GroupDocs.Rewriter is an easy-to-use and versatile online service for rephrasing the texts with full preservation of the meaning. Its advanced AI reads and understands the text and then rephrases it in various wordings, providing a plagiarism-free result without losing the original meaning. While the background process is very complex and resource-intensive, you do not have to worry about formulas, machine learning, and load – our cloud services do all the work.
+      GroupDocs.Rewriter is an easy-to-use and versatile online service for summarizing, rephrasing or simplifying the texts with full preservation of the meaning. Its advanced AI reads and understands the text and then rephrases it in various wordings, providing a plagiarism-free result without losing the original meaning. While the background process is very complex and resource-intensive, you do not have to worry about formulas, machine learning, and load – our cloud services do all the work.
 
       This SDK greatly simplifies the interaction of .NET code with GroupDocs.Rewriter Cloud services, allowing you to focus on business logic rather than the technical details. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple methods that can be used in any .NET application. The .NET SDK, demo applications, documentation, and examples are open source distributed under the MIT license. You can use them for any purpose and change any part of the code.
     tabs:
@@ -71,12 +71,13 @@ overview:
         left:
           enable: true
           icon: "fas fa-crop"
-          title: "Supported content"
+          title: "Supported features"
           content: |
-            * Plain text
-            * Microsoft Office
-            * OpenOffice
-            * PDF
+            * Paraphrase
+            * Summarize
+            * Simplify
+            * Synonymize
+            * Compare
         right:
           enable: true
           icon: "fas fa-file-alt"
@@ -84,7 +85,14 @@ overview:
           content: |
             * Arabic
             * English
+            * French
+            * German
+            * Indonesian
+            * Italian
+            * Portuguese
             * Russian
+            * Slovak
+            * Spanish
             * Ukrainian
       
       ## TAB TWO ##
@@ -190,30 +198,6 @@ features:
         content: "GroupDocs.Rewriter Cloud API for .NET comes with detailed developer guides and live code examples for all major programming languages to start working with paraphrasing features in no time. Simply create a free account at GroupDocs Cloud, get APP SID & Key information to communicate with GroupDocs Cloud API and you are ready to use the SDK."
 
       # more_feature_loop
-      - title: "Rewrite Word document - .NET"
-        content: |
-          
-          
-          ```cs
-            //Get your App SID, App Key and Storage Name at https://dashboard.groupdocs.cloud (free registration is required).
-
-            public FileResponse RewriteDocument(Configuration conf)
-            {    
-                string name = "test.docx";
-                string folder = "";
-                string language = "en";
-                string format = "docx";
-                string storage = "First Storage";
-                string saveFile = "translation.docx";
-                string savePath = "";
-                
-                RewriterApi api = new RewriterApi(conf);
-                RewriteDocumentRequest request = api.CreateDocumentRequest(name, folder, language, format, storage, saveFile, savePath, masters, elements);
-                FileResponse response = api.RunRewritingTask(request);
-                return response;
-            }
-          ```
-      # more_feature_loop
       - title: "Any language, platform and storage service provider"
         content: "GroupDocs.Rewriter Cloud is a REST API that can easily be integrated with any language or platform, capable to manage HTTP requests and responses. It supports all popular cloud storage services such as Google Cloud, Drive, DropBox and Amazon S3 to interact without any dependencies."
 
@@ -223,17 +207,67 @@ features:
           
           
           ```cs
-            //Get your App SID, App Key and Storage Name at https://dashboard.groupdocs.cloud (free registration is required).
-
-            public TextResponse TranslateText(Configuration conf)
+            using GroupDocs.Rewriter.Cloud.Sdk.Api;
+            using GroupDocs.Rewriter.Cloud.Sdk.Client;
+            using GroupDocs.Rewriter.Cloud.Sdk.Client.Auth;
+            using GroupDocs.Rewriter.Cloud.Sdk.Model;
+            using Configuration = GroupDocs.Rewriter.Cloud.Sdk.Client.Configuration;
+            using System.Diagnostics;
+            using System.IO;
+            using System.Collections.Generic;
+            using System.Net.Http;
+            using HttpStatusCode = System.Net.HttpStatusCode;
+            namespace GroupDocs.Rewriter.Cloud.Sdk
             {
-                string language = "en";
-                string text = "The client’s mission is to make the world a healthier place and to make traveling and visiting public places safer and more comfortable for people.";
-                
-                RewriterApi api = new RewriterApi(conf);
-                RewriteTextRequest request = api.CreateTextRequest(language, text);
-                TextResponse response = api.RunRewritingTextTask(request);
-                return response;
+                public class TextRewriter
+                {
+                    public TextRewriter()
+                    {
+                        string apiPath = "https://api.groupdocs.cloud/v2.0/rewriter";
+                        string clientId = "YOUR_CLIENT_ID";
+                        string clientSecret = "YOUR_CLIENT_SECRET";
+                        Configuration conf = new Configuration();
+                        conf.BasePath = apiPath;
+                        conf.OAuthClientId = clientId;
+                        conf.OAuthClientSecret = clientSecret;
+                        conf.OAuthFlow = OAuthFlow.APPLICATION;
+                        ParaphraseApi api = new ParaphraseApi(conf);
+                        string srcText = "YOUR_TEXT";
+                        ParaphraseTextResponse textResponse = new ParaphraseTextResponse();
+                        ParaphraseTextRequest req = new ParaphraseTextRequest(
+                            language: sourceLanguage,
+                            text: srcText,
+                            suggestions: ParaphraseTextRequest.SuggestionsEnum.One,
+                            diversityDegree: DegreeEnum.Off);
+                        StatusResponse responseId = await api.ParaphraseTextPostAsync(req);
+                        try
+                        {
+                            if (responseId.Status.ToString() == "Accepted")
+                            {
+                                while(true)
+                                {
+                                    textResponse = await api.ParaphraseTextRequestIdGetAsync(responseId.Id);
+                                    if (textResponse.Status.ToString() == "OK")
+                                    {
+                                        Console.WriteLine("Plain text paraphrasing: " + textResponse.ParaphraseReult);
+                                        break;
+                                    }
+                                    else
+                                         Thread.Sleep(2000);
+                                }
+                            }
+                            else
+                            {
+                                textResponse = new ParaphraseTextResponse() { Status = responseId.Status, Message = responseId.Message };
+                                Console.WriteLine("Text error: " + textResponse.Message);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Text exception: " + ex.ToString());
+                        }
+                    }
+                }
             }
           ```
       # more_feature_loop

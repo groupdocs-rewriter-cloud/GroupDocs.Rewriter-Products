@@ -6,16 +6,16 @@ draft: false
 
 product: "Rewriter"
 product_tag: "rewriter"
-platform: "cURL"
-platform_tag: "curl"
+platform: "Java"
+platform_tag: "java"
 
 ############################# Head ############################
-head_title: "Paraphrase, simplify, summarize texts and documents from the command line"
-head_description: "Interact with GroupDocs.Rewriter REST API directly from the command line or Bash scripts without installing any software. Automatically paraphrase, summarize or simplify texts and documents with the quality of the professional copyrighter."
+head_title: "Paraphrase, simplify, summarize texts and documents in your Java applications"
+head_description: "Create Java applications based on GroupDocs.Rewriter API focusing on business logic rather than the technical details."
 
 ############################# Header ############################
-title: "Paraphrase, simplify, summarize texts and documents from the command line"
-description: "Interact with GroupDocs.Rewriter REST API directly from the command line or Bash scripts without installing any software. Automatically paraphrase, summarize or simplify texts and documents with the quality of the professional copyrighter."
+title: "Java Cloud SDK for document paraphrasing, summarization and simplification"
+description: "Create Java applications based on GroupDocs.Rewriter API focusing on business logic rather than the technical details."
 button:
     enable: true
 
@@ -24,10 +24,10 @@ submenu:
     enable: true
     
     left:
-        img_alt: "Rewriter for Cloud"
-        image: "/sdk/272x272/groupdocs_rewriter-for-curl.png"
+        img_alt: "GroupDocs.Rewriter Cloud SDK for Java"
+        image: "/sdk/272x272/groupdocs_rewriter-for-java.png"
         product: "GroupDocs.Rewriter"
-        platform: "cURL"
+        platform: "Java"
 
     middle:
         button:
@@ -59,7 +59,7 @@ overview:
     content: |
       GroupDocs.Rewriter is an easy-to-use and versatile online service for summarizing, rephrasing or simplifying the texts with full preservation of the meaning. Its advanced AI reads and understands the text and then rephrases it in various wordings, providing a plagiarism-free result without losing the original meaning. While the background process is very complex and resource-intensive, you do not have to worry about formulas, machine learning, and load – our cloud services do all the work.
 
-      The service provides a versatile and easy-to-use REST API, which can be accessed without installing any software. Just use cURL commands and combine them into scripts for complex tasks. You can also use third party REST API tools like Postman. This allows you to use GroupDocs.Rewriter on any platform with an internet connection, even those not yet covered by the SDK.
+      This SDK greatly simplifies the interaction of Java code with GroupDocs.Rewriter Cloud services, allowing you to focus on business logic rather than the technical details. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple methods that can be used in any Java application. The Java SDK, demo applications, documentation, and examples are open source distributed under the MIT license. You can use them for any purpose and change any part of the code.
     tabs:
       enable: true
       
@@ -118,13 +118,14 @@ overview:
               content: |
                 * **PDF**
                 * **TXT**
+
         
 
 
       ## TAB THREE ##
       tab_three:
         description: |
-          GroupDocs.Rewriter Cloud for cURL works on any device or platform with Internet connection
+          GroupDocs.Rewriter Cloud for Java works on any device or platform with Internet connection
       
         left:
           enable: true
@@ -163,9 +164,10 @@ overview:
 ############################# Features ############################
 features:
     enable: true
-    title: "Advanced features of document paraphrasing REST API"
+    title: "Advanced Document Rewriting REST API Features"
 
     feature:
+      # feature loop
       # feature loop
       - icon: "fas fa-language"
         content: "Creates unique content while fully preserving the original message"
@@ -189,61 +191,74 @@ features:
       # feature loop
       - icon: "fas fa-list"
         content: "API explorer based on Swagger collection"
-    
+            
     more_feature:
       # more_feature_loop
+      - title: "Quick start with document rewriting REST API"
+        content: "GroupDocs.Rewriter Cloud API for Java comes with detailed developer guides and live code examples for all major programming languages to start working with paraphrasing features in no time. Simply create a free account at GroupDocs Cloud, get APP SID & Key information to communicate with GroupDocs Cloud API and you are ready to use the SDK."
+
+
+      # more_feature_loop
       - title: "Any language, platform and storage service provider"
-        content: "GroupDocs.Rewriter is a REST API that can easily be integrated into any application written in any programming language capable of handling HTTP requests and responses. It natively supports all popular cloud storage services such as Google Cloud, Drive, DropBox and Amazon S3 to interact without any dependencies."
+        content: "GroupDocs.Rewriter Cloud is a REST API that can easily be integrated with any language or platform, capable to manage HTTP requests and responses. It supports all popular cloud storage services such as Google Cloud, Drive, DropBox and Amazon S3 to interact without any dependencies."
 
       # more_feature_loop
-      - title: "Quick start with GroupDocs.Rewriter REST API"
-        content: "GroupDocs.Rewriter Cloud API comes with detailed developer references and live code examples for all major programming languages to start working with API features in no time. Simply create a free account at GroupDocs Cloud, get APP SID & Key information to communicate with GroupDocs Cloud API and you are ready to make an API request on any platform using cURL commands."
-
-      # more_feature_loop
-      - title: "Rewrite plain text - cURL"
+      - title: "Rewrite plain text - Java"
         content: |
           
           
-          ```shell
-            //Get your App SID, App Key and Storage Name at https://dashboard.groupdocs.cloud (free registration is required).
-            // Getting token
-            curl --location --reqest POST 'https://id.groupdocs.cloud/connect/token' \
-                --header 'Content-Type: application/x-www-form-urlencoded' \
-                --data-urlencode 'grant_type=client_credentials' \
-                --data-urlencode 'client_id=CLIENT-ID-VALUE' \
-                --data-urlencode 'client_secret=CLIENT-SECRET-VALUE'
-            //response
-            {
-                "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...LxLejtsVFwrZpHA",
-                "expires_in": 3600,
-                "token_type": "Bearer"
+          ```java
+            package com.groupdocs;
+            // Import classes:
+
+            import com.groupdocs.model.*;
+            import org.openapitools.client.api.ParaphraseApi;
+
+            public class Demo {
+                public static void main(String[] args) {
+                    String basePath = "https://api.groupdocs.cloud/v2.0/rewriter";
+                    String cliendId = "YOUR_CLIENT_ID";
+                    String clientSecret = "YOUR_CLIENT_SECRET";
+
+                    ApiClient defaultClient = new ApiClient(basePath, cliendId, clientSecret, null);
+                    ParaphraseApi apiInstance = new ParaphraseApi(defaultClient);
+
+                    String s = "TEXT_TO_PARAPHRASE";
+
+                    ParaphraseTextRequest request = new ParaphraseTextRequest();
+                    request.setLanguage("en");
+                    request.setText(s);
+
+                    try {
+                        StatusResponse response = apiInstance.paraphraseTextPost(request);
+                        String response_id = response.getId();
+                        if (!response.getStatus().toString().equals("BadRequest")){
+                            while (true){
+                                ParaphraseTextResponse paraphraseTextResponse = apiInstance.paraphraseTextRequestIdGet(response_id);
+                                if (paraphraseTextResponse.getStatus().toString().equals("OK")) {
+                                    System.out.println(paraphraseTextResponse);
+                                    break;
+                                }
+                                try {
+                                    Thread.sleep(2000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                    } catch (ApiException e) {
+                        System.err.println("Exception when calling ParaphraseApi#paraphraseTextPost");
+                        System.err.println("Status code: " + e.getCode());
+                        System.err.println("Reason: " + e.getResponseBody());
+                        System.err.println("Response headers: " + e.getResponseHeaders());
+                        e.printStackTrace();
+                    }
+                }
             }
-            // Sending text for paraphrasing
-            curl --location --request POST 'https://api.groupdocs.cloud/v2.0/rewriter/paraphrase/text' \
-                --header 'Content-Type: application/json' \
-                --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...LxLejtsVFwrZpHA' \
-                --data '{
-                    "language": "en",
-                    "text": "Hello, everyone! We will try to rephrase this text into something new.",
-                    "suggestions": "One",
-                    "diversityDegree": "Medium"
-                }'
-            //response
-            {
-                "status": 202,
-                "message": "Starting",
-                "id": "dae5390e-3658-4bff-85bf-4a77cc04eaa5_text"
-            }
-            //getting result
-            curl --request GET --location ''https://api.groupdocs.cloud/v2.0/rewriter/paraphrase/text/dae5390e-3658-4bff-85bf-4a77cc04eaa5_text'' \
-                --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...LxLejtsVFwrZpHA'	
-            //response
-            {
-                "statusCode": 200,
-                "message": "Text processed successfully",
-                "paraphraseReult": "Hello, everyone! We are going to try to recast this text as something new."
-            }	
           ```
+      # more_feature_loop
+      - title: "Security and Authentication"
+        content: "The GroupDocs.Rewriter Cloud API is SSL secured and the authentication requests require a signature and AppSID query parameters or OAuth 2.0 authorization header."
       
 
 ############################# Support ############################
@@ -276,6 +291,12 @@ solutions:
           product: "GroupDocs.Rewriter"
           platform: "Python"
           link: "/rewriter/python/"
+
+    
+
+     
+
+        
 
 ############################# Back to top ###############################
 back_to_top:

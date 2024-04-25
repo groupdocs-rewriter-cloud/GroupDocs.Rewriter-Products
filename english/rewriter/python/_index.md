@@ -10,11 +10,11 @@ platform: "Python"
 platform_tag: "python"
 
 ############################# Head ############################
-head_title: "Paraphrase content and documents in your Python applications"
+head_title: "Paraphrase, simplify, summarize content and documents in your Python applications"
 head_description: "Create cross-platform data science, AI, and automation solutions in Python based on GroupDocs.Rewriter API. Focus on business logic rather than the technical details."
 
 ############################# Header ############################
-title: "Python Cloud SDK for document paraphrasing"
+title: "Python Cloud SDK for document paraphrasing, summarization and simplification"
 description: "Create cross-platform data science, AI, and automation solutions in Python based on GroupDocs.Rewriter API. Focus on business logic rather than the technical details."
 button:
     enable: true
@@ -57,8 +57,8 @@ submenu:
 overview:
     enable: true
     content: |
-      GroupDocs.Rewriter is an easy-to-use and versatile online service for rephrasing the texts with full preservation of the meaning. Its advanced AI reads and understands the text and then rephrases it in various wordings, providing a plagiarism-free result without losing the original meaning. While the background process is very complex and resource-intensive, you do not have to worry about formulas, machine learning, and load – our cloud services do all the work.
-
+      GroupDocs.Rewriter is an easy-to-use and versatile online service for summarizing, rephrasing or simplifying the texts with full preservation of the meaning. Its advanced AI reads and understands the text and then rephrases it in various wordings, providing a plagiarism-free result without losing the original meaning. While the background process is very complex and resource-intensive, you do not have to worry about formulas, machine learning, and load – our cloud services do all the work.
+      
       This SDK greatly simplifies the interaction with GroupDocs.Rewriter Cloud services from Python code, allowing you to focus on business logic rather than the technical details. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple methods that can be used in any Python application or workbook. The Python SDK, demo applications, documentation, and examples are open source distributed under the MIT license. You can use them for any purpose and change any part of the code.
     tabs:
       enable: true
@@ -71,12 +71,13 @@ overview:
         left:
           enable: true
           icon: "fas fa-crop"
-          title: "Supported content"
+          title: "Supported features"
           content: |
-            * Plain text
-            * Microsoft Office
-            * OpenOffice
-            * PDF
+            * Paraphrase
+            * Summarize
+            * Simplify
+            * Synonymize
+            * Detect paraphrasing
         right:
           enable: true
           icon: "fas fa-file-alt"
@@ -84,7 +85,14 @@ overview:
           content: |
             * Arabic
             * English
+            * French
+            * German
+            * Indonesian
+            * Italian
+            * Portuguese
             * Russian
+            * Slovak
+            * Spanish
             * Ukrainian
       
       ## TAB TWO ##
@@ -189,30 +197,6 @@ features:
         content: "GroupDocs.Rewriter Cloud API for Python comes with detailed developer guides and live code examples for all major programming languages to start working with API features in no time. Simply create a free account at GroupDocs Cloud, get APP SID & Key information to communicate with GroupDocs Cloud API and you are ready to use the SDK."
 
       # more_feature_loop
-      - title: "Rewrite Word document - Python"
-        content: |
-          
-          
-          ```cs
-            //Get your App SID, App Key and Storage Name at https://dashboard.groupdocs.cloud (free registration is required).
-
-            public FileResponse RewriteDocument(Configuration conf)
-            {    
-                string name = "test.docx";
-                string folder = "";
-                string language = "en";
-                string format = "docx";
-                string storage = "First Storage";
-                string saveFile = "translation.docx";
-                string savePath = "";
-                
-                RewriterApi api = new RewriterApi(conf);
-                RewriteDocumentRequest request = api.CreateDocumentRequest(name, folder, language, format, storage, saveFile, savePath, masters, elements);
-                FileResponse response = api.RunRewritingTask(request);
-                return response;
-            }
-          ```
-      # more_feature_loop
       - title: "Any language, platform and storage service provider"
         content: "GroupDocs.Rewriter Cloud is a REST based API that can easily be integrated with any language or platform, capable to manage HTTP requests and responses. It supports all popular cloud storage services such as Google Cloud, Drive, DropBox and Amazon S3 to interact without any dependencies."
 
@@ -221,19 +205,28 @@ features:
         content: |
           
           
-          ```cs
-            //Get your App SID, App Key and Storage Name at https://dashboard.groupdocs.cloud (free registration is required).
+          ```python
+            import time
+            import groupdocs_rewriter_cloud
+            from groupdocs_rewriter_cloud.api.paraphrase_api import ParaphraseApi  
+            from groupdocs_rewriter_cloud.rest import ApiException
+            from groupdocs_rewriter_cloud.models import HttpStatusCode, ParaphraseTextRequest
 
-            public TextResponse TranslateText(Configuration conf)
-            {
-                string language = "en";
-                string text = "The client’s mission is to make the world a healthier place and to make traveling and visiting public places safer and more comfortable for people.";
-                
-                RewriterApi api = new RewriterApi(conf);
-                RewriteTextRequest request = api.CreateTextRequest(language, text);
-                TextResponse response = api.RunRewritingTextTask(request);
-                return response;
-            }
+            api = ParaphraseApi()
+            file_api = FileApi()
+            api.api_client.configuration.client_id = "CLIENT_ID"
+            api.api_client.configuration.client_secret = "CLIENT_SECRET"
+            language = "en"
+            src_text = "YOUR_TEXT"
+            request = ParaphraseTextRequest(language=language, text=src_text)
+            status = api.paraphrase_text_post(request) 
+            if status.status == groupdocs_rewriter_cloud.models.HttpStatusCode.ACCEPTED:
+                while True:
+                    text_response = api.paraphrase_text_request_id_get(status.id)
+                    if text_response.status == groupdocs_rewriter_cloud.models.HttpStatusCode.OK:
+                        print(text_response.paraphrase_result)
+                        break
+                    time.sleep(2)
           ```
       # more_feature_loop
       - title: "Security and Authentication"
