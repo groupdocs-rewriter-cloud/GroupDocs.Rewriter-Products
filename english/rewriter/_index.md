@@ -49,7 +49,7 @@ apis:
           image: "/sdk/272x272/groupdocs_rewriter-for-python.png"
           product: "GroupDocs.Rewriter"
           platform: "Python"
-          content: "Create cross-platform AI and automation solutions in Python based on GroupDocs.Rewriter API. Paraphrase, simmplify and summarize texts and documents focusing on business logic rather than the technical details."
+          content: "Create cross-platform AI and automation solutions in Python based on GroupDocs.Rewriter API. Paraphrase, simplify and summarize texts and documents focusing on business logic rather than the technical details."
 
     # api loop
     - title: "GroupDocs.Rewriter online applications"

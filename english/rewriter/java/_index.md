@@ -87,12 +87,14 @@ overview:
             * English
             * French
             * German
+            * Hindi
             * Indonesian
             * Italian
             * Portuguese
             * Russian
             * Slovak
             * Spanish
+            * Thai
             * Ukrainian
       
       ## TAB TWO ##
